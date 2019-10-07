@@ -1,0 +1,2 @@
+# whats-for-dinner
+¿No sabes que comer hoy? Solo dile a What's for dinner? que ingredientes tienes en tu cocina y te sugerirá recetas sencillas que puedes preparar por ti mismo. ¿Eres Vegano o alérgico a algún ingrediente? No hay problema, también puedes filtrar y clasificar las recetas según tus necesidades. Empareja tus creaciones con el vino apropiado, calcula tu consumo de calorías o aprende exactamente cuánto cuesta el plato que estás preparando, What´s for dinner? será tu ayudante de cocina perfecto.
