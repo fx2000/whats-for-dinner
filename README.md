@@ -28,12 +28,12 @@ El __MVP__ debe cumplir con las siguientes funcionalidades:
 ## Data Structure ##
 - **root/**
      - index.html (includes login modal)
-     - myfridge.html
+     - mykitchen.html
      - faq.html
      - signup.html
      - **css/**
           - style.css
-     - **scripts/**
+     - **js/**
           - main.js
           - Signup.js
           - User.js
