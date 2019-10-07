@@ -11,7 +11,7 @@
 El __MVP__ debe cumplir con las siguientes funcionalidades:
 
 - __Homepage:__ La página de inicio debe presentar el concepto del app y mostrar sus principales caracteristicas.
-- __My Fridge:__ En esta sección un usuario registrado puede especificar los ingredientes con los que cuenta actualmente en su cocina y recibir un listado de recetas sugeridas para preparar con esos ingredientes.
+- __My Kitchen:__ En esta sección un usuario registrado puede especificar los ingredientes con los que cuenta actualmente en su cocina y recibir un listado de recetas sugeridas para preparar con esos ingredientes.
 - __FAQ:__ Todo lo que siempre has querido saber acerca de ***What's for dinner?*** pero nunca te atreviste a preguntar.
 - __Signup:__ Un formulario de registro para nuevos usuarios
 - __Login:__ Un formulario de login para usuarios existentes.
