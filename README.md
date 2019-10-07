@@ -20,11 +20,12 @@ El __MVP__ debe cumplir con las siguientes funcionalidades:
 ## Links
 
 ### Trello
-[Link url](https://trello.com/b/l3BabwRN/whats-for-dinner)
+[Trello Kanban board](https://trello.com/b/l3BabwRN/whats-for-dinner)
 
 ### Git
-[Link Repo](https://github.com/fx2000/whats-for-dinner)
+[Gihub Repo URL](https://github.com/fx2000/whats-for-dinner)
 
 ### Spoonacular
 [API Description](https://spoonacular.com/application/frontend/downloads/spoonacular-api-slides.pdf)
+
 [API Documentation](https://spoonacular.com/food-api/docs)
