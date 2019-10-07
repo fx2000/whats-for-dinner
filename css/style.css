@@ -1,0 +1,98 @@
+/* Fix height of carousel items 
+.carousel-item {
+  height: 60vh;
+}*/
+
+/*Import font */
+@font-face {
+  font-family: 'Burbank Big Cd Bd';
+  src: url('../assets/fonts/BurbankBigCondensed-Bold.woff2') format('woff2'),
+    url('../assets/fonts/BurbankBigCondensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.burbank {
+  font-family: 'Burbank Big Cd Bd';
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+.text-md {
+  font-size: 1.5rem;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.bg-lettuce {
+  background-color: #81B012;
+}
+
+.text-lettuce {
+  color: #81B012;
+}
+
+/* Begin Navbar */
+.navbar-brand {
+  width: 10em;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-nav>.active,
+.navbar-light .navbar-nav>.active:hover,
+.navbar-light .navbar-nav>.active:focus {
+  color: #81B012;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #81B012;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover {
+  color: white;
+  background-color: #81B012;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #81B012;
+  background-color: transparent;
+}
+
+/* Home page background image */
+/* TODO: Add responsive background for smaller screens */
+.home-image {
+  height: 90vh;
+  background: url(../assets/img/img-background.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* Making Youtube videos responsive */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
