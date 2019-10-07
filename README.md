@@ -40,7 +40,8 @@ El __MVP__ debe cumplir con las siguientes funcionalidades:
           - Validator.js
           - spoonacularApiService.js
      - **assets/**
-           -img/
+          - img/
+          - fonts/
 
 ## Links
 
