@@ -25,6 +25,23 @@ El __MVP__ debe cumplir con las siguientes funcionalidades:
 - Sugerencias de vinos para acompañar la receta
 - Videos instructivos embedded
 
+## Data Structure ##
+- **root/**
+     - index.html (includes login modal)
+     - myfridge.html
+     - faq.html
+     - signup.html
+     - **css/**
+          - style.css
+     - **scripts/**
+          - main.js
+          - Signup.js
+          - User.js
+          - Validator.js
+          - spoonacularApiService.js
+     - **assets/**
+           -img/
+
 ## Links
 
 ### Trello
