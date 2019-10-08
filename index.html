@@ -20,7 +20,7 @@
 <body>
   <main>
     <!-- Begin Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light justify-space-around burbank text-md">
+    <nav class="navbar navbar-expand-lg navbar-light justify-space-around burbank text-sm">
       <img class="navbar-brand img-fluid" src="assets/img/logo.png">
       <button class="custom-toggler navbar-toggler bg-lettuce" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,6 +28,7 @@
       </button>
       <div class="container"></div> <!-- Blank div to split navbar -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- TODO: Try to make align-items-center work in <ul> -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -64,8 +65,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <button onclick="window.location.href='mykitchen.html'" class="btn bg-lettuce burbank text-white btn-lg">Let's find out...</button>
+        <div class="container text-center">
+          <h3 class="burbank text-white black-outline text-md pt-3">How about a delicious home cooked meal with ingredients you already
+            have in your kitchen?</h3>
+          <button onclick="window.location.href='mykitchen.html'"
+              class="btn bg-lettuce burbank text-white btn-lg">Let's get cooking...</button>         
         </div>
       </div>
     </section>
@@ -77,23 +81,23 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-12 text-center p-1">
             <img src="assets/img/vegetables.png" class="feature-img" alt="Vegetable basket icon">
-            <h4 class="burbank text-lg">Stay Healthy</h4>
+            <h4 class="burbank text-md pt-3">Stay Healthy</h4>
             <p class="text-small p-2">No more junk food or frozen meals, cook fresh food at home with thousands of tasty recipes at your disposal</p>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 text-center p-1">
             <img src="assets/img/back-in-time.png" class="feature-img" alt="Clock icon">
-            <h4 class="burbank text-lg">Save Time</h4>
+            <h4 class="burbank text-md pt-3">Save Time</h4>
             <p class="text-small p-2">Take the guesswork out of cooking with our delicious daily features</p>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 text-center p-1">
             <img src="assets/img/piggy-bank.png" class="feature-img" alt="Piggy bank icon">
-            <h4 class="burbank text-lg">Save Money</h4>
-            <p class="text-small p-2">Use ingredients you already have in your kitchen, no need to go shopping if you can already make a full meal with what you have.</p>
+            <h4 class="burbank text-md pt-3">Save Money</h4>
+            <p class="text-small p-2">Use ingredients you already have in your kitchen, no need to go shopping!</p>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 text-center p-1">
             <img src="assets/img/recycle.png" class="feature-img" alt="Recycle bin">
-            <h4 class="burbank text-lg">Reduce Waste</h4>
-            <p class="text-small p-2">Stop throwing expired ingredients away, find marvelous ways to cook with everything you have</p>
+            <h4 class="burbank text-md pt-3">Reduce Waste</h4>
+            <p class="text-small p-2">Stop throwing unused ingredients away, find marvelous ways to cook with everything you have</p>
           </div>
         </div>
       </div>
@@ -114,7 +118,7 @@
     <section class="container pt-5 mt-5">
       <div class="row">
         <div class="col-12">
-          <h2 class="text-lettuce burbank text-center">No cooking skills? No problem!! We have step-by-step videos to help you along</h2>
+          <h2 class="text-lettuce burbank text-center">No cooking skills? No problem! We have step-by-step videos to help you along</h2>
         </div>
       </div>
       <div class="row">
@@ -125,7 +129,7 @@
           </div>
     
           <div class="video-desc">
-            <h5 class="burbank text-lg"><span id="video-1-title">Short-Rib Beef Bourguignon</span></h5>
+            <h5 class="burbank text-md"><span id="video-1-title">Short-Rib Beef Bourguignon</span></h5>
             <p class=""><span id="video-1-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
             <p class=""><small class="text-muted">Last updated <span id="video-1-updated">3</span> mins ago</small></p>
           </div>
@@ -138,7 +142,7 @@
           </div>
         
           <div class="video-desc">
-            <h5 class="burbank text-lg"><span id="video-2-title">Chocolate Coconut Caramel Cheesecake</span></h5>
+            <h5 class="burbank text-md"><span id="video-2-title">Chocolate Coconut Caramel Cheesecake</span></h5>
             <p class=""><span id="video-2-description">This is a wider card with supporting text below as a natural lead-in to additional content.</span></p>
             <p class=""><small class="text-muted">Last updated <span id="video-2-updated">3</span> mins ago</small></p>
           </div>
