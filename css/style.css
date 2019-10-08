@@ -12,6 +12,40 @@
   font-style: normal;
 }
 
+/* Make text responsive */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.2rem;
+  }
+
+  .food-fact>p {
+    padding-top: 12%;
+    padding-bottom: 5%;
+  }
+}
+
 .burbank {
   font-family: 'Burbank Big Cd Bd';
 }
@@ -74,7 +108,7 @@
 /* TODO: Add responsive background for smaller screens */
 .home-image {
   height: 90vh;
-  background: url(../assets/img/img-background.png) no-repeat center center;
+  background: url(../assets/img/img-background.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -95,4 +129,24 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Food fact box */
+.food-fact {
+  border-bottom: 250px solid #81B012;
+  border-left: 8px solid transparent;
+  border-right: 14px solid transparent;
+  height: 0;
+  margin-top: 30px;
+  transform: rotate(2deg);
+}
+
+.food-fact > p {
+  padding: 15% 3%;
+  color: white;
+}
+
+/* Make feature images smaller */
+.feature-img {
+  height: 90px;
 }
