@@ -10,12 +10,38 @@
 
 El __MVP__ debe cumplir con las siguientes funcionalidades:
 
-- __Homepage:__ La página de inicio debe presentar el concepto del app y mostrar sus principales caracteristicas. Debe incluir un slideshow de recetas recomendadas del día generadas al azar, un ticker de "food facts" del día y algunos videos integrados de recetas.
-- __My Fridge:__ En esta sección un usuario registrado puede especificar los ingredientes con los que cuenta actualmente en su cocina y recibir un listado de recetas sugeridas para preparar con esos ingredientes.
+- __Homepage:__ La página de inicio debe presentar el concepto del app y mostrar sus principales caracteristicas.
+- __My Kitchen:__ En esta sección un usuario registrado puede especificar los ingredientes con los que cuenta actualmente en su cocina y recibir un listado de recetas sugeridas para preparar con esos ingredientes.
 - __FAQ:__ Todo lo que siempre has querido saber acerca de ***What's for dinner?*** pero nunca te atreviste a preguntar.
 - __Signup:__ Un formulario de registro para nuevos usuarios
 - __Login:__ Un formulario de login para usuarios existentes.
 
+## Backlog ##
+
+- Slideshow de recetas recomendadas del dia
+' Ticker con "random food facts"
+- Calculo de costo total por receta
+- Filtro de recetas por alergias o restricciones dietéticas
+- Sugerencias de vinos para acompañar la receta
+- Videos instructivos embedded
+
+## Data Structure ##
+- **root/**
+     - index.html (includes login modal)
+     - mykitchen.html
+     - faq.html
+     - signup.html
+     - **css/**
+          - style.css
+     - **js/**
+          - main.js
+          - Signup.js
+          - User.js
+          - Validator.js
+          - spoonacularApiService.js
+     - **assets/**
+          - img/
+          - fonts/
 
 ## Links
 
