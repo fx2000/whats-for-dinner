@@ -108,7 +108,7 @@
     <section class="container">
       <div class="row justify-content-center">
         <div class="col-12 food-fact pt-1 pb-5">
-          <p class="h3 burbank text-center"><span id="random-fact">Did you know tomatoes once tried to take over the world?, they even made a movie about it.</span></p>
+          <p class="h3 burbank text-center green-frame-text">#FOODFACT: <span id="random-fact"><!-- Random fact from API goes here--></span></p>
         </div>
       </div>
     </section>
@@ -121,30 +121,63 @@
           <h2 class="text-lettuce burbank text-center">No cooking skills? No problem! We have step-by-step videos to help you along</h2>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6">
           <div class="video-container" id="video-1">
-            <iframe width="350" height="315" src="https://www.youtube.com/embed/ZwoI3iwTXEc" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Youtube embedded video goes here-->
           </div>
     
           <div class="video-desc">
-            <h5 class="burbank text-md"><span id="video-1-title">Short-Rib Beef Bourguignon</span></h5>
-            <p class=""><span id="video-1-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
-            <p class=""><small class="text-muted">Last updated <span id="video-1-updated">3</span> mins ago</small></p>
+            <h5 class="burbank text-md">
+              <span id="video-1-title"><!-- Video title goes here--></span>
+            </h5>
+            <p class="burbank"><span id="video-1-views" class="text-lettuce text-sm">
+                <!-- Video views go here--></span> Hungry people have watched this video</p>
           </div>
         </div>
     
         <div class="col-sm-12 col-md-12 col-lg-6">
           <div class="video-container" id="video-2">
-            <iframe width="350" height="315" src="https://www.youtube.com/embed/XfFE4lCoui8" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Youtube embedded video goes here-->
           </div>
         
           <div class="video-desc">
-            <h5 class="burbank text-md"><span id="video-2-title">Chocolate Coconut Caramel Cheesecake</span></h5>
-            <p class=""><span id="video-2-description">This is a wider card with supporting text below as a natural lead-in to additional content.</span></p>
-            <p class=""><small class="text-muted">Last updated <span id="video-2-updated">3</span> mins ago</small></p>
+            <h5 class="burbank text-md">
+              <span id="video-2-title"><!-- Video title goes here--></span>
+            </h5>
+            <p class="burbank"><span id="video-2-views" class="text-lettuce text-sm">
+                <!-- Video views go here--></span> Hungry people have watched this video</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="video-container" id="video-3">
+            <!-- Youtube embedded video goes here-->
+          </div>
+
+          <div class="video-desc">
+            <h5 class="burbank text-md"><span id="video-3-title">
+                <!-- Video title goes here--></span></h5>
+            <p class="burbank"><span id="video-3-views" class="text-lettuce text-sm">
+                <!-- Video views go here--></span> Hungry people have watched this video</p>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="video-container" id="video-4">
+            <!-- Youtube embedded video goes here-->
+          </div>
+
+          <div class="video-desc">
+            <h5 class="burbank text-md">
+              <span id="video-4-title"><!-- Video title goes here--></span>
+            </h5>
+            <p class="burbank"><span id="video-4-views" class="text-lettuce text-sm">
+                <!-- Video views go here--></span> Hungry people have watched this video</p>
           </div>
         </div>
       </div>
@@ -163,6 +196,10 @@
     </footer>
 
   </main>
+
+  <!-- Load spoonacularAPI -->
+  <script src="js/spoonacularApi.js"></script>
+  <script src="js/main.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

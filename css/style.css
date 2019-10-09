@@ -17,7 +17,13 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 450px) {
+  .food-fact>p {
+    padding: 50% 3%;
+  }
+}
+
+@media (min-width: 450px) {
   html {
     font-size: 1rem;
   }

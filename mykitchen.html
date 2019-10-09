@@ -60,11 +60,407 @@
     <section class="container">
       <div class="row justify-content-center">
         <div class="col-12 food-fact pt-1 pb-5">
-          <p class="h1 burbank text-center text-lg"><span id="random-fact">My Kitchen</span></p>
+          <p class="h1 burbank text-center text-lg green-frame-text" id="title">My Kitchen</p>
         </div>
       </div>
     </section>
     <!-- End title -->
+
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12">
+          <p id="intro-text">This is where the magic happens!, select the ingredients you have available from the list below. We will select the best recipes you can make with what you have at hand and send them your way.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin form -->
+    <div class="container">
+      <div class="row" id="main-div">
+        <form class="w-100 p-5 justify-content-md-center" name=" myKitchen-form">
+          <h2 class="burbank text-sm pt-3">Alcoholic beverages</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="beer" id="beer">
+              <label class="form-check-label" for="beer">
+                <img src="assets/img/ingredients/beer.jpg" alt="Picture of beer" />
+                Beer
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="red-wine" id="red-wine">
+              <label class="form-check-label" for="red-wine">
+                <img src="assets/img/ingredients/red-wine.jpg" alt="Picture of red wine" />
+                Red Wine
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="white-wine" id="white-wine">
+              <label class="form-check-label" for="white-wine">
+                <img src="assets/img/ingredients/white-wine.jpg" alt="Picture of white wine" />
+                White Wine
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Bakery</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="bread" id="bread">
+              <label class="form-check-label" for="bread">
+                <img src="assets/img/ingredients/white-bread.jpg" alt="Picture of white bread" />
+                Bread
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="tortillas" id="tortillas">
+              <label class="form-check-label" for="tortillas">
+                <img src="assets/img/ingredients/flour-tortilla.jpg" alt="Picture of flour tortillas" />
+                Tortillas
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="cereal" id="cereal">
+              <label class="form-check-label" for="cereal">
+                <img src="assets/img/ingredients/rice-crispy-cereal.png" alt="Picture of cereal" />
+                Cereal
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Baking</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="baking powder" id="baking powder">
+              <label class="form-check-label" for="baking powder">
+                <img src="assets/img/ingredients/white-powder.jpg" alt="Picture of baking powder" />
+                Baking Powder
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="flour" id="flour">
+              <label class="form-check-label" for="flour">
+                <img src="assets/img/ingredients/flour.png" alt="Picture of flour" />
+                Flour
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="sugar" id="sugar">
+              <label class="form-check-label" for="sugar">
+                <img src="assets/img/ingredients/sugar-in-bowl.png" alt="Picture of sugar" />
+                Sugar
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Canned and Jarred</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="olives" id="olives">
+              <label class="form-check-label" for="olives">
+                <img src="assets/img/ingredients/olives-mixed.jpg" alt="Picture of olives" />
+                Olives
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="canned tunna" id="canned tunna">
+              <label class="form-check-label" for="canned tunna">
+                <img src="assets/img/ingredients/canned-tuna.png" alt="Picture of canned tunna" />
+                Canned Tuna
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Condiments</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="salt" id="salt">
+              <label class="form-check-label" for="salt">
+                <img src="assets/img/ingredients/salt.jpg" alt="Picture of salt" />
+                Salt
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="bbq sauce" id="bbq sauce">
+              <label class="form-check-label" for="bbq sauce">
+                <img src="assets/img/ingredients/barbecue-sauce.jpg" alt="Picture of bbq sauce" />
+                Barbecue Sauce
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="hot sauce" id="hot sauce">
+              <label class="form-check-label" for="hot sauce">
+                <img src="assets/img/ingredients/hot-sauce-or-tabasco.png" alt="Picture of hot sauce" />
+                Hot Sauce
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="ketchup" id="ketchup">
+              <label class="form-check-label" for="ketchup">
+                <img src="assets/img/ingredients/ketchup.png" alt="Picture of ketchup" />
+                Ketchup
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="mayonnaise" id="mayonnaise">
+              <label class="form-check-label" for="mayonnaise">
+                <img src="assets/img/ingredients/mayonnaise.png" alt="Picture of mayonnaise" />
+                Mayonnaise
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="mustard" id="mustard">
+              <label class="form-check-label" for="mustard">
+                <img src="assets/img/ingredients/mustard.jpg" alt="Picture of mustard" />
+                Mustard
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Dairy</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="butter" id="butter">
+              <label class="form-check-label" for="butter">
+                <img src="assets/img/ingredients/butter.jpg" alt="Picture of butter" />
+                Butter
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="milk" id="milk">
+              <label class="form-check-label" for="milk">
+                <img src="assets/img/ingredients/milk.png" alt="Picture of milk" />
+                Milk
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="yogurt" id="yogurt">
+              <label class="form-check-label" for="yogurt">
+                <img src="assets/img/ingredients/plain-yogurt.jpg" alt="Picture of yogurt" />
+                Yogurt
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Meat</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
+              <label class="form-check-label" for="bacon">
+                <img src="assets/img/ingredients/raw-bacon.jpg" alt="Picture of bacon" />
+                Bacon
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="beef" id="beef">
+              <label class="form-check-label" for="beef">
+                <img src="assets/img/ingredients/beef-cubes-raw.png" alt="Picture of beef" />
+                Beef
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="chicken breast" id="chicken breast">
+              <label class="form-check-label" for="chicken breast">
+                <img src="assets/img/ingredients/chicken-breasts.png" alt="Picture of chicken breast" />
+                Chicken Breast
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="ground beef" id="ground beef">
+              <label class="form-check-label" for="ground beef">
+                <img src="assets/img/ingredients/fresh-ground-beef.jpg" alt="Picture of ground beef" />
+                Ground Beef
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="ham" id="ham">
+              <label class="form-check-label" for="ham">
+                <img src="assets/img/ingredients/ham.jpg" alt="Picture of ham" />
+                Ham
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Oil and Vinegar</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="olive oil" id="olive oil">
+              <label class="form-check-label" for="olive oil">
+                <img src="assets/img/ingredients/olive-oil.jpg" alt="Picture of olive oil" />
+                Olive Oil
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="vinegar" id="vinegar">
+              <label class="form-check-label" for="vinegar">
+                <img src="assets/img/ingredients/red-wine-vinegar.jpg" alt="Picture of vinegar" />
+                Vinegar
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Pasta and Rice</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="pasta" id="pasta">
+              <label class="form-check-label" for="pasta">
+                <img src="assets/img/ingredients/fusilli.jpg" alt="Picture of pasta" />
+                Pasta
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="quinoa" id="quinoa">
+              <label class="form-check-label" for="quinoa">
+                <img src="assets/img/ingredients/uncooked-quinoa.png" alt="Picture of quinoa" />
+                Quinoa
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="rice" id="rice">
+              <label class="form-check-label" for="rice">
+                <img src="assets/img/ingredients/uncooked-white-rice.png" alt="Picture of rice" />
+                Rice
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Produce</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="apple" id="apple">
+              <label class="form-check-label" for="apple">
+                <img src="assets/img/ingredients/apple.jpg" alt="Picture of apple" />
+                Apple
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="avocado" id="avocado">
+              <label class="form-check-label" for="avocado">
+                <img src="assets/img/ingredients/avocado.jpg" alt="Picture of avocado" />
+                Avocado
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="banana" id="banana">
+              <label class="form-check-label" for="banana">
+                <img src="assets/img/ingredients/bananas.jpg" alt="Picture of banana" />
+                Banana
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="bell pepper" id="bell pepper">
+              <label class="form-check-label" for="bell pepper">
+                <img src="assets/img/ingredients/yellow-bell-pepper.jpg" alt="Picture of bell pepper" />
+                Bell Pepper
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="carrots" id="carrots">
+              <label class="form-check-label" for="carrots">
+                <img src="assets/img/ingredients/sliced-carrot.png" alt="Picture of carrot" />
+                Carrot
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="celery" id="celery">
+              <label class="form-check-label" for="celery">
+                <img src="assets/img/ingredients/celery.jpg" alt="Picture of celery" />
+                Celery
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="cilantro" id="cilantro">
+              <label class="form-check-label" for="cilantro">
+                <img src="assets/img/ingredients/cilantro.png" alt="Picture of cilantro" />
+                Cilantro
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="corn" id="corn">
+              <label class="form-check-label" for="corn">
+                <img src="assets/img/ingredients/corn.png" alt="Picture of corn" />
+                Corn
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="garlic" id="garlic">
+              <label class="form-check-label" for="garlic">
+                <img src="assets/img/ingredients/garlic.jpg" alt="Picture of garlic" />
+                Garlic
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="lettuce" id="lettuce">
+              <label class="form-check-label" for="lettuce">
+                <img src="assets/img/ingredients/iceberg-lettuce.jpg" alt="Picture of lettuce" />
+                Lettuce
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="mushroom" id="mushroom">
+              <label class="form-check-label" for="mushroom">
+                <img src="assets/img/ingredients/mushrooms.png" alt="Picture of mushroom" />
+                Mushroom
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="onion" id="onion">
+              <label class="form-check-label" for="onion">
+                <img src="assets/img/ingredients/brown-onion.png" alt="Picture of onion" />
+                Onion
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="potatoes" id="potatoes">
+              <label class="form-check-label" for="potatoes">
+                <img src="assets/img/ingredients/potatoes-yukon-gold.png" alt="Picture of potatoes" />
+                Potatoe
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="tomato" id="tomato">
+              <label class="form-check-label" for="tomato">
+                <img src="assets/img/ingredients/roma-tomatoes.png" alt="Picture of tomato" />
+                Tomato
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <h2 class="burbank text-sm pt-3">Snacks</h2>
+          <div class="form-row">
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="saltine crackers" id="saltine ctrackers">
+              <label class="form-check-label" for="saltine ctrackers">
+                <img src="assets/img/ingredients/saltine-crackers.jpg" alt="Picture of saltine ctrackers" />
+                Saltine Crackers
+              </label>
+            </div>
+            <div class="form-check col">
+              <input class="form-check-input" type="checkbox" value="chocolate" id="chocolate">
+              <label class="form-check-label" for="chocolate">
+                <img src="assets/img/ingredients/milk-chocolate.jpg" alt="Picture of chocolate" />
+                Chocolate
+              </label>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+
+          <button type="submit" class="btn btn-lg bg-lettuce burbank text-white" id="myKitchen-button"
+            onclick="myKitchen(event)">Cook!</button>
+        </form>
+      </div>
+    </div>
+    <!-- End form -->
 
     <!-- Copyright info -->
     <footer class="container-fluid pt-3 mt-5 bg-dark text-white">
@@ -78,6 +474,8 @@
     </footer>
 
   </main>
+  <!-- Load spoonacularAPI -->
+  <script src="js/spoonacularApi.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
