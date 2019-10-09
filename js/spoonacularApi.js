@@ -2,8 +2,11 @@
 
 // Define API main parameters
 //const apiKey = "3eb90b198ae74fd5b0f56581af7089d3"; //duque@outlook.com
-const apiKey = "a97f4185fc074874a9040bd1b2892e79"; //daniel@compraremesas.com
+//const apiKey = "a97f4185fc074874a9040bd1b2892e79"; //daniel@compraremesas.com
+const apiKey = "c5eb608eb0ec4944950e18db579c17fe"; //fx2000@gmail.com
 const apiUrl = "https://api.spoonacular.com/";
+
+
 
 // Get data from JSON API using async/await
 async function getApiAsync(url, args) {
@@ -12,11 +15,15 @@ async function getApiAsync(url, args) {
   return data;
 }
 
+
+
 // Get a random joke from the API
 const getJoke = (data) => {
   let factBox = document.querySelector('#random-fact');
   factBox.innerText = data.text;
 }
+
+
 
 // Get cooking videos from the API
 const getVideos = (data) => {
@@ -70,6 +77,95 @@ const getVideos = (data) => {
   video4Views.innerText = (data.videos[3].views).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 }
 
+const postRecipe = (data) => {
+  console.log(data);
+
+  // Change title
+  let title = document.querySelector('#title');
+  title.innerText = "Delicious!";
+
+  // Change text
+  let introText = document.querySelector('#intro-text');
+  introText.innerText = '';
+
+  // Clear form and add new content
+  let mainDiv = document.querySelector('#main-div');
+  mainDiv.innerHTML = 
+  `
+  <!-- Begin recipe -->
+    <div class="container mt-3">
+      <div class="row" id="main-div">
+        <div class="col-12 border rounded">
+          <div class="row pt-3">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <img class="card-img-top rounded" src="${data.image}"
+                alt="Photo of ${data.title}">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <h5 class="burbank text-md">${data.title}</h5>
+              <p class="burbank">Spoonacular Score <span class="text-lettuce text-sm">
+                  ${data.spoonacularScore}</span></p>
+              <p class="burbank">Preparation: <span class="text-lettuce text-sm">
+                  ${data.readyInMinutes}</span> minutes</p>
+              <div class="row">
+                <div class="col-12" id="badges"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 pt-3">
+              <h5 class="burbank text-md">Ingredients</h5>
+              <ul id="recipe-ingredients"></ul>
+              <h5 class="burbank text-md">How do I make this?</h5>
+              <p>${data.instructions}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End recipe -->
+  `;
+
+  // Get ingredients
+  let ingredients = [];
+  for (let i = 0; i < data.extendedIngredients.length; i++) {
+    ingredients.push(data.extendedIngredients[i]);
+  }
+
+  const ingredientDiv = document.querySelector('#recipe-ingredients');
+  ingredients.forEach(ingredient => {
+    ingredientDiv.insertAdjacentHTML('beforeend',
+    `<li>${ingredient.originalString}</li>`);
+  });
+
+  // Get badges
+  const badgesDiv = document.querySelector('#badges');
+  if (data.vegetarian) {
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/vegetarian.png">`);
+  };
+  if (data.gluttenFree) {
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/gluttenFree.png">`);
+  };
+  if (data.dairyFree) {
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/dairyFree.png">`);
+  };
+  if (data.ketogenic) {
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/keto.png">`);
+  };
+
+}
+
+const getRecipeId = (event) => {
+  event.preventDefault()
+
+  // Call the async function and feed the API response to the postRecipe function
+  getApiAsync(apiUrl, 'recipes/' + event.srcElement.form.elements[0].value + '/information?includeNutrition=false')
+    .then(function (data) {
+      postRecipe(data);
+    });
+}
+
+
 // Get recipes from the API with queried ingredients and add them to the DOM
 const getRecipes = (data) => {
 
@@ -79,7 +175,7 @@ const getRecipes = (data) => {
 
   // Change text
   let introText = document.querySelector('#intro-text');
-  introText.innerText = "Here is a selection of recipes we think you might like that use the ingredients you told us about, click on any of them to find out more:";
+  introText.innerText = "These are the best recipes we could find using the ingredients you told us about. Enjoy!";
 
   // Clear form and add new content
   let mainDiv = document.querySelector('#main-div');
@@ -104,25 +200,27 @@ const getRecipes = (data) => {
     }
 
     mainDiv.insertAdjacentHTML('beforeend',
-      `
-      <div class="col-sm-12 col-md-12 col-lg-6">
-        <div class="img-fluid">
-          <img src="${data[i].image}" alt="Photo of ${data[i].title}">
-        </div>
-        <div>
-          <h5 class="burbank text-md">${data[i].title}</h5>
-          <p class="burbank"><span class="text-lettuce text-sm">
+    `
+    <div class="card m-1" style="width: 18rem;">
+      <img src="${data[i].image}" class="card-img-top" alt="Photo of ${data[i].title}">
+      <div class="card-body">
+        <h5 class="card-title burbank text-md">${data[i].title}</h5>
+        <p class="burbank"><span class="text-lettuce text-sm">
               ${(data[i].likes).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}</span> people have liked this recipe</p>
           <address><span class="burbank">Things you have:</span> ${usedIngredients.join(', ')}<br/>
           <span class="burbank">Things you need:</span> ${missedIngredients.join(', ')}</address>
-        </div>
       </div>
-    `);
+      <form>
+        <input type="number" value="${data[i].id}" class="invisible"></input>
+        <div class="card-footer text-center"><button type="submit" class="btn bg-lettuce burbank text-white" onclick="getRecipeId(event)">Looks yummy!</button><div>
+      </form>
+    </div>
+    `
+    );
   }
-
-  // Add new content
-
 }
+
+
 
 // Capture ingredients in myKitchen form
 const myKitchen = (event) => {
@@ -134,9 +232,8 @@ const myKitchen = (event) => {
     }
   }
   let ingredients = ingredientsList.join();
-
   // Call the async function and feed the API response to the getRecipes function
-  getApiAsync(apiUrl, 'recipes/findByIngredients?ingredients=' + ingredients + '&number=8')
+  getApiAsync(apiUrl, 'recipes/findByIngredients?ranking=2&ingredients=' + ingredients + '&number=6')
     .then(function (data) {
       getRecipes(data);
     });
