@@ -77,6 +77,9 @@ const getVideos = (data) => {
   video4Views.innerText = (data.videos[3].views).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 }
 
+
+
+// Post recipe to the DOM
 const postRecipe = (data) => {
   console.log(data);
 
@@ -126,19 +129,28 @@ const postRecipe = (data) => {
     <!-- End recipe -->
   `;
 
+
+
+
   // Get ingredients
   let ingredients = [];
   for (let i = 0; i < data.extendedIngredients.length; i++) {
     ingredients.push(data.extendedIngredients[i]);
   }
 
+
+
+  // Insert ingredients in the DOM
   const ingredientDiv = document.querySelector('#recipe-ingredients');
   ingredients.forEach(ingredient => {
     ingredientDiv.insertAdjacentHTML('beforeend',
     `<li>${ingredient.originalString}</li>`);
   });
 
-  // Get badges
+
+
+
+  // Get nutrition badges
   const badgesDiv = document.querySelector('#badges');
   if (data.vegetarian) {
     badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/vegetarian.png">`);
@@ -155,6 +167,8 @@ const postRecipe = (data) => {
 
 }
 
+
+// Get recipe details
 const getRecipeId = (event) => {
   event.preventDefault()
 
@@ -164,6 +178,8 @@ const getRecipeId = (event) => {
       postRecipe(data);
     });
 }
+
+
 
 
 // Get recipes from the API with queried ingredients and add them to the DOM

@@ -79,6 +79,7 @@ html {
   color: #81B012;
 }
 
+/* Black outline for title letters */
 .black-outline {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -121,7 +122,6 @@ html {
 }
 
 /* Home page background image */
-/* TODO: Add responsive background for smaller screens */
 .home-image {
   height: 90vh;
   background: url(../assets/img/img-background.jpg) no-repeat center center;
@@ -174,4 +174,11 @@ html {
 
 .food-icon {
   width: 60px;;
+}
+
+/* Card shadows */
+.card {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+  0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }

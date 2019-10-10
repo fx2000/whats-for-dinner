@@ -1,36 +1,34 @@
-![What's for dinner? Logo](http://appstic.net/assets/img/logox150.png?raw=true)
+![What's for dinner? Logo](http://www.appstic.net/assets/img/banner.png?raw=true)
 
 # What's for dinner?
 
-¿No sabes que comer hoy? Solo dile a ***What's for dinner?*** que ingredientes tienes en tu cocina y te sugerirá recetas sencillas que puedes preparar por ti mismo. ¿Eres Vegano o alérgico a algún ingrediente? No hay problema, también puedes filtrar y clasificar las recetas según tus necesidades. Empareja tus creaciones con el vino apropiado, calcula tu consumo de calorías o aprende exactamente cuánto cuesta el plato que estás preparando, ***What's for dinner?*** será tu ayudante de cocina preferido.
+Don't know what to eat today? just tell ***What's for dinner?*** what ingredients you have in your kitchen and we will suggest easy to follow recipes that you can make for yourself. Vegetarian?, lactose intolerant? No problem, our recipes have badges identifying dietary restrictions, soon you'll be able to filter by them too!.
 
-***What's for dinner?*** es un proyecto creado en JavasScript como parte del programa [Ironhack](https://www.ironhack.com/) (WebDev-FT-092029) utilizando el API de [Spoonacular](https://spoonacular.com/)
+***What's for dinner?*** was developed using JavaScript as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-092029) using the [Spoonacular](https://spoonacular.com/) API.
 
 ## Minimum Viable Product
 
-El __MVP__ debe cumplir con las siguientes funcionalidades:
+The __MVP__ will cover the following:
 
-- __Homepage:__ La página de inicio debe presentar el concepto del app y mostrar sus principales caracteristicas.
-- __My Kitchen:__ En esta sección un usuario registrado puede especificar los ingredientes con los que cuenta actualmente en su cocina y recibir un listado de recetas sugeridas para preparar con esos ingredientes.
-- __FAQ:__ Todo lo que siempre has querido saber acerca de ***What's for dinner?*** pero nunca te atreviste a preguntar.
-- __Signup:__ Un formulario de registro para nuevos usuarios
-- __Login:__ Un formulario de login para usuarios existentes.
+- __Homepage:__ The homepage will present the apps concept and features and provide links to the rest of the site.
+- __My Kitchen:__ A user will be able to search the recipe database by selecting the ingredients they have in their kitchen.
+- __FAQ:__ Everything you always wanted to know about ***What's for dinner?*** but were too afraid to ask.
+- __Signup:__ A registration form for new users.
+- __Login:__ A sign in form for existing users.
 
 ## Backlog ##
 
-- Slideshow de recetas recomendadas del dia
-' Ticker con "random food facts"
-- Calculo de costo total por receta
-- Filtro de recetas por alergias o restricciones dietéticas
-- Sugerencias de vinos para acompañar la receta
-- Videos instructivos embedded
+- Recipe cost calculation
+- Filtering recipes by dietary restriction
+- Wine pairings
 
 ## Data Structure ##
 - **root/**
-     - index.html (includes login modal)
+     - index.html
      - mykitchen.html
      - faq.html
-     - signup.html
+     - register.html
+     - signin.html
      - **css/**
           - style.css
      - **js/**
@@ -38,7 +36,7 @@ El __MVP__ debe cumplir con las siguientes funcionalidades:
           - Signup.js
           - User.js
           - Validator.js
-          - spoonacularApiService.js
+          - spoonacularApi.js
      - **assets/**
           - img/
           - fonts/
