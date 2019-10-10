@@ -1,9 +1,9 @@
 'use strict'
 
 // Define API main parameters
-//const apiKey = "3eb90b198ae74fd5b0f56581af7089d3"; //duque@outlook.com
+const apiKey = "3eb90b198ae74fd5b0f56581af7089d3"; //duque@outlook.com
 //const apiKey = "a97f4185fc074874a9040bd1b2892e79"; //daniel@compraremesas.com
-const apiKey = "c5eb608eb0ec4944950e18db579c17fe"; //fx2000@gmail.com
+//const apiKey = "c5eb608eb0ec4944950e18db579c17fe"; //fx2000@gmail.com
 const apiUrl = "https://api.spoonacular.com/";
 
 // Get data from JSON API using async/await
@@ -197,7 +197,7 @@ const getRecipes = (data) => {
 
     mainDiv.insertAdjacentHTML('beforeend',
     `
-    <div class="card m-1" style="width: 18rem;">
+    <div class="card m-1">
       <img src="${data[i].image}" class="card-img-top" alt="Photo of ${data[i].title}">
       <div class="card-body">
         <h5 class="card-title burbank text-md">${data[i].title}</h5>
