@@ -1,8 +1,3 @@
-/* Fix height of carousel items 
-.carousel-item {
-  height: 60vh;
-}*/
-
 /*Import font */
 @font-face {
   font-family: 'Burbank Big Cd Bd';
@@ -123,7 +118,8 @@ html {
 
 /* Home page background image */
 .home-image {
-  height: 90vh;
+  height: 40rem;
+  padding-bottom: 30px;
   background: url(../assets/img/img-background.jpg) no-repeat center center;
   background-size: cover;
 }
