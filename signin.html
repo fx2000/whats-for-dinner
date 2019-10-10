@@ -21,7 +21,7 @@
   <main>
     <!-- Begin Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light justify-space-around burbank text-sm">
-      <img class="navbar-brand img-fluid" src="assets/img/logo.png">
+      <img class="navbar-brand img-fluid" src="assets/img/logo.png" alt="What's for dinner? logo">
       <button class="custom-toggler navbar-toggler bg-lettuce" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
     <section class="container">
       <div class="row justify-content-center">
         <div class="col-12 food-fact pt-1 pb-5">
-          <p class="h1 burbank text-center text-lg green-frame-text">Sign In</p>
+          <p class="h1 burbank text-center text-lg green-frame-text" id="title">Sign In</p>
         </div>
       </div>
     </section>
@@ -68,17 +68,30 @@
 
     <!-- Begin form -->
     <div class="container">
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center" id="signin-form">
         <form class="w-100 p-5">
           <div class="form-group">
-            <label class="burbank text-sm" for=" email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <label class="burbank text-sm" for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" autocomplete="email">
           </div>
           <div class="form-group">
             <label class="burbank text-sm" for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="password">
           </div>
-          <button type="submit" class="btn btn-lg bg-lettuce burbank text-white">Sign in</button>
+
+          <!-- Begin error status container -->
+          <section class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-12 col-sm-12 py-1">
+                <div id="status-error">
+                  <!-- Error status messages go here -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End error status container -->
+
+          <button type="submit" class="btn btn-lg bg-lettuce burbank text-white" onclick="signin(event)">Sign in</button>
         </form>
       </div>
     </div>
@@ -96,6 +109,9 @@
     </footer>
 
   </main>
+
+  <!-- Load user handling scripts -->
+  <script src="js/signin.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

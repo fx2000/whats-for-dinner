@@ -6,8 +6,6 @@
 const apiKey = "c5eb608eb0ec4944950e18db579c17fe"; //fx2000@gmail.com
 const apiUrl = "https://api.spoonacular.com/";
 
-
-
 // Get data from JSON API using async/await
 async function getApiAsync(url, args) {
   let response = await fetch(url + args + '&apiKey=' + apiKey);
@@ -15,15 +13,11 @@ async function getApiAsync(url, args) {
   return data;
 }
 
-
-
 // Get a random joke from the API
 const getJoke = (data) => {
   let factBox = document.querySelector('#random-fact');
   factBox.innerText = data.text;
 }
-
-
 
 // Get cooking videos from the API
 const getVideos = (data) => {
@@ -77,8 +71,6 @@ const getVideos = (data) => {
   video4Views.innerText = (data.videos[3].views).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 }
 
-
-
 // Post recipe to the DOM
 const postRecipe = (data) => {
   console.log(data);
@@ -106,7 +98,7 @@ const postRecipe = (data) => {
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <h5 class="burbank text-md">${data.title}</h5>
-              <p class="burbank">Spoonacular Score <span class="text-lettuce text-sm">
+              <p class="burbank">Spoonacular Score: <span class="text-lettuce text-sm">
                   ${data.spoonacularScore}</span></p>
               <p class="burbank">Preparation: <span class="text-lettuce text-sm">
                   ${data.readyInMinutes}</span> minutes</p>
@@ -129,16 +121,11 @@ const postRecipe = (data) => {
     <!-- End recipe -->
   `;
 
-
-
-
   // Get ingredients
   let ingredients = [];
   for (let i = 0; i < data.extendedIngredients.length; i++) {
     ingredients.push(data.extendedIngredients[i]);
   }
-
-
 
   // Insert ingredients in the DOM
   const ingredientDiv = document.querySelector('#recipe-ingredients');
@@ -147,26 +134,22 @@ const postRecipe = (data) => {
     `<li>${ingredient.originalString}</li>`);
   });
 
-
-
-
   // Get nutrition badges
   const badgesDiv = document.querySelector('#badges');
   if (data.vegetarian) {
-    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/vegetarian.png">`);
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/vegetarian.png" alt="vegetarian badge">`);
   };
   if (data.gluttenFree) {
-    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/gluttenFree.png">`);
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/gluttenFree.png" alt="glutten free badge">`);
   };
   if (data.dairyFree) {
-    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/dairyFree.png">`);
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/dairyFree.png" alt="dairy free badge">`);
   };
   if (data.ketogenic) {
-    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/keto.png">`);
+    badgesDiv.insertAdjacentHTML('beforeend', `<img class="food-icon" src="assets/img/icons/keto.png" alt="ketogenic badge">`);
   };
 
 }
-
 
 // Get recipe details
 const getRecipeId = (event) => {
@@ -179,15 +162,12 @@ const getRecipeId = (event) => {
     });
 }
 
-
-
-
 // Get recipes from the API with queried ingredients and add them to the DOM
 const getRecipes = (data) => {
 
   // Change title
   let title = document.querySelector('#title');
-  title.innerText = "Horay!";
+  title.innerText = "Hooray!";
 
   // Change text
   let introText = document.querySelector('#intro-text');
@@ -235,8 +215,6 @@ const getRecipes = (data) => {
     );
   }
 }
-
-
 
 // Capture ingredients in myKitchen form
 const myKitchen = (event) => {

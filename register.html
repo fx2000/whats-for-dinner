@@ -21,7 +21,7 @@
   <main>
     <!-- Begin Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light justify-space-around burbank text-sm">
-      <img class="navbar-brand img-fluid" src="assets/img/logo.png">
+      <img class="navbar-brand img-fluid" src="assets/img/logo.png" alt="What's for dinner? logo">
       <button class="custom-toggler navbar-toggler bg-lettuce" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
     <section class="container">
       <div class="row justify-content-center">
         <div class="col-12 food-fact pt-1 pb-5">
-          <p class="h1 burbank text-center text-lg green-frame-text">Register</p>
+          <p class="h1 burbank text-center text-lg green-frame-text" id="title">Register</p>
         </div>
       </div>
     </section>
@@ -68,37 +68,56 @@
 
     <!-- Begin form -->
     <div class="container">
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center" id="registration-form">
         <form class="w-100 p-5">
           <div class="form-group">
-            <label class="burbank text-sm" for="firstname">First Name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="Enter your first name">
+            <label class="burbank text-sm" for="first-name">First Name</label>
+            <input type="text" class="form-control" id="first-name" autocomplete="given-name"
+              placeholder="Enter your first name" required>
           </div>
           <div class="form-group">
-            <label class="burbank text-sm" for="firstname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="Enter your last name">
+            <label class="burbank text-sm" for="first-name">Last Name</label>
+            <input type="text" class="form-control" id="last-name" autocomplete="family-name"
+              placeholder="Enter your last name" required>
           </div>
           <div class="form-group">
             <label class="burbank text-sm" for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" autocomplete="email" placeholder="Enter email" required>
             <small id="emailHelp" class="form-text text-muted">No spam, we promise.</small>
           </div>
           <div class="form-group">
-            <label class="burbank text-sm" for="city">Where do you live?</label>
-            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+            <label class="burbank text-sm" for="country">Where do you live?</label>
+            <input type="text" class="form-control" id="country" autocomplete="country-name"
+              placeholder="Enter your country" required>
           </div>
           <div class="form-group">
             <label class="burbank text-sm" for="password">Choose a Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" autocomplete="new-password" placeholder="Password"
+              required>
           </div>
           <div class="form-group">
-            <label class="burbank text-sm" for="confirmpassword">Confirm your Password</label>
-            <input type="password" class="form-control" id="confirmpassword" placeholder="One more time">
+            <label class="burbank text-sm" for="confirm-password">Confirm your Password</label>
+            <input type="password" class="form-control" id="confirm-password" autocomplete="new-password"
+              placeholder="Once more, with feeling" required>
           </div>
-          <button type="submit" class="btn btn-lg bg-lettuce burbank text-white">Register</button>
+
+          <!-- Begin error status container -->
+          <section class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-12 col-sm-12 py-1">
+                <div id="status-error">
+                  <!-- Error status messages go here -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End error status container -->
+
+          <button type="submit" id="register-button" class="btn btn-lg bg-lettuce burbank text-white" onclick="register.saveData(event)" disabled>Register</button>
         </form>
       </div>
     </div>
+    <!-- End form -->
     
 
     <!-- Copyright info -->
@@ -111,10 +130,13 @@
         </div>
       </div>
     </footer>
+    <!-- End copyright info -->
 
   </main>
 
-  <!-- Load registration JS -->
+  <!-- Load user handling scripts -->
+  <script src="js/User.js"></script>
+  <script src="js/Validator.js"></script>
   <script src="js/Register.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
