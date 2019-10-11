@@ -175,8 +175,15 @@ const getRecipes = (data) => {
 
   // Clear form and add new content
   let mainDiv = document.querySelector('#main-div');
-  mainDiv.innerHTML = '';
+  mainDiv.innerHTML = 
+    `
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-around" id="recipe-list-container">
+        </div>
+    </div>    
+    `;
 
+  let recipeList = document.querySelector("#recipe-list-container");
   let usedIngredients = [];
   let missedIngredients = [];
 
@@ -195,9 +202,9 @@ const getRecipes = (data) => {
       missedIngredients.push(data[i].missedIngredients[j].name);
     }
 
-    mainDiv.insertAdjacentHTML('beforeend',
+    recipeList.insertAdjacentHTML('beforeend',
     `
-    <div class="card m-1">
+    <div class="card m-3">
       <img src="${data[i].image}" class="card-img-top" alt="Photo of ${data[i].title}">
       <div class="card-body">
         <h5 class="card-title burbank text-md">${data[i].title}</h5>
@@ -227,7 +234,7 @@ const myKitchen = (event) => {
   }
   let ingredients = ingredientsList.join();
   // Call the async function and feed the API response to the getRecipes function
-  getApiAsync(apiUrl, 'recipes/findByIngredients?ranking=2&ingredients=' + ingredients + '&number=6')
+  getApiAsync(apiUrl, 'recipes/findByIngredients?ranking=1&ingredients=' + ingredients + '&number=6')
     .then(function (data) {
       getRecipes(data);
     });

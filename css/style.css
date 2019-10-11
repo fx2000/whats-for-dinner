@@ -20,25 +20,25 @@ html {
 
 @media (min-width: 450px) {
   html {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 992px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 1200px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .food-fact>p {
@@ -118,7 +118,7 @@ html {
 
 /* Home page background image */
 .home-image {
-  height: 40rem;
+  height: 50rem;
   padding-bottom: 30px;
   background: url(../assets/img/img-background.jpg) no-repeat center center;
   background-size: cover;
@@ -177,5 +177,37 @@ html {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14),
   0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  width: 18rem;
+  width: 25rem;
+}
+
+/* Placing checkmarks over images */
+.ingredients-wrapper {
+  position: relative;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.ingredients-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  width: 30%;
+  height: 30%;
+  z-index: 99;
+}
+
+.ingredients-select {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ingredients-input:checked {
+  opacity: 1;
+  background-color: #81B012;
+  width: 25px;
+  height: 25px;
 }

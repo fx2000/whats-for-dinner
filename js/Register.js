@@ -13,6 +13,11 @@ class Register {
     this.statusErrorContainer = document.querySelector('#status-error');
     this.registrationForm = document.querySelector('#registration-form');
     this.titleDiv = document.querySelector('#title');
+
+    this.emailErrorContainer = document.querySelector('#email-error');
+    this.emailDuplicateErrorContainer = document.querySelector('#duplicate-email-error');
+    this.passwordErrorContainer = document.querySelector('#password-error');
+    this.passwordConfirmErrorContainer = document.querySelector('#confirm-password-error');
   }
 
   saveData = (event) => {
@@ -76,15 +81,17 @@ class Register {
 
   // Handle error messages
   handleErrorMessages = () => {
-    this.statusErrorContainer.innerHTML = '';
+    this.emailErrorContainer.innerHTML = '';
+    this.emailDuplicateErrorContainer.innerHTML = '';
+    this.passwordErrorContainer.innerHTML = '';
+    this.passwordConfirmErrorContainer.innerHTML = '';
 
     // Check for error messages and display them
     const errors = validator.checkErrors();
-    for (const element in errors) {
-      const error = document.createElement('div');
-      error.innerHTML = errors[element];
-      this.statusErrorContainer.appendChild(error);
-    }
+    if (errors.hasOwnProperty('invalidEmailError')) {this.emailErrorContainer.innerHTML = errors.invalidEmailError;};
+    if (errors.hasOwnProperty('duplicateEmailError')) {this.emailDuplicateErrorContainer.innerHTML = errors.duplicateEmailError;};
+    if (errors.hasOwnProperty('passwordError')) {this.passwordErrorContainer.innerHTML = errors.passwordError;};
+    if (errors.hasOwnProperty('passwordConfirmError')) {this.passwordConfirmErrorContainer.innerHTML = errors.passwordConfirmError;};
   }
 
   // Enable or disable the register button after validation
