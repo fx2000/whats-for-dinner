@@ -87,6 +87,8 @@
             <input type="email" class="form-control" id="email" autocomplete="email" placeholder="Enter email" required>
             <small id="emailHelp" class="form-text text-muted">No spam, we promise.</small>
           </div>
+          <div id="email-error"></div>
+          <div id="duplicate-email-error"></div>
           <div class="form-group">
             <label class="burbank text-sm" for="country">Where do you live?</label>
             <input type="text" class="form-control" id="country" autocomplete="country-name"
@@ -97,11 +99,13 @@
             <input type="password" class="form-control" id="password" autocomplete="new-password" placeholder="Password"
               required>
           </div>
+          <div id="password-error"></div>
           <div class="form-group">
             <label class="burbank text-sm" for="confirm-password">Confirm your Password</label>
             <input type="password" class="form-control" id="confirm-password" autocomplete="new-password"
               placeholder="Once more, with feeling" required>
           </div>
+          <div id="confirm-password-error"></div>
 
           <!-- Begin error status container -->
           <section class="container-fluid">
